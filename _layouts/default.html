@@ -4,9 +4,20 @@
 <meta charset="utf-8" />
 <title>{{ page.title }}</title>
 <link href="{{ site.baseurl }}/styles/default.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+	var myImg = new Array{"000.jpg","001.jpg","002.jpg","003.jpg","004.jpg","005.jpg"};
+	
+	function getRandomInt(min, max) {
+    	return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	function getImg(x){
+		return document.getElementById("banner").innerHTML = '<img src="{{ site.baseurl }}/images/' + myImg[x] + '" alt="banner" width="980" />';
+	}
+</script>
 </head>
 
-<body>
+<body onload="getImg(getRandomInt(0,6));">
 
 <div id="container">
 
@@ -15,7 +26,7 @@
 </header>
 
 <div id="banner">
-	<img src="{{ site.baseurl }}/images/000.jpg" alt="banner" width="980" />
+	
 </div>
 
 <nav>
