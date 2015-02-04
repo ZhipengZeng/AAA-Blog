@@ -9,15 +9,13 @@
 </script>
 </head>
 
-<body>
+<body onload="getImg(getRandom(0,6));">
 <script type="text/javascript">
 	
 	function getRandomInt(min, max) {
     	return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
-	var x=getRandomInt(0,6);
 	function getImg(x){
-		
 		document.getElementById("banner").innerHTML = '<img src="{{ site.baseurl }}/images/' + myImg[x] + '" alt="banner" width="980" />';
 	}
 
