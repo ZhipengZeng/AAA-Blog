@@ -15,9 +15,9 @@
 	function getRandomInt(min, max) {
     	return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
-
+	var x=getRandomInt(0,6);
 	function getImg(x){
-		x=getRandomInt(0,6);
+		
 		document.getElementById("banner").innerHTML = '<img src="{{ site.baseurl }}/images/' + myImg[x] + '" alt="banner" width="980" />';
 	}
 
