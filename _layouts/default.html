@@ -18,7 +18,7 @@
 
 	function getImg(x){
 		x=getRandomInt(0,6);
-		return document.getElementById("banner").innerHTML = '<img src="{{ site.baseurl }}/images/' + myImg[x] + '" alt="banner" width="980" />';
+		document.getElementById("banner").innerHTML = '<img src="{{ site.baseurl }}/images/' + myImg[x] + '" alt="banner" width="980" />';
 	}
 
 </script>
