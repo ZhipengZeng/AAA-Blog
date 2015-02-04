@@ -154,9 +154,12 @@ footer{
 }
 footer p{
 	margin-top:5em;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	color:#FFFFFF;
+}
+footer p:last-of-type{
+	margin-top: 5px;
 }
 footer a{
 	text-decoration:none;
