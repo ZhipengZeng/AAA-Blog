@@ -109,6 +109,20 @@ nav li a:hover{
 	color:#ADFFF1;
 }
 
+#content pre{
+	color:#ADFFF1;
+	background-color:#FFFFFF;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	border: 1px solid Black;
+}
+#content code{
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	border-radius: 2px;
+	border: 1px solid Black;
+	background-color: #FFFFFF;
+	color: #606060;
+}
+
 /*--------------aside--------------*/
 aside{
 	height:30px;
