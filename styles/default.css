@@ -117,8 +117,6 @@ nav li a:hover{
 }
 #content code{
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-	border-radius: 2px;
-	border: 1px solid Black;
 	background-color: #FFFFFF;
 	color: #606060;
 }

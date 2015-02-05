@@ -5,11 +5,11 @@ title: Note of Unix
 ##A Note of Unix Problems I Met (keep updating)	
 1.	`>` and `>>`	
 
-	>	`>` writes to a file, overwriting any existing contents.	 
-	>	`>>` appends to a file.		
+	>	\> writes to a file, overwriting any existing contents.	 
+	>	\>\> appends to a file.		
 2.	Add a number of user in Unix 	
 
-	>	`#!/bin/bash		
+	>	#!/bin/bash		
 	>	i=1 	
 	>	while [ $i -le 100 ]	
 	>	do 	
@@ -25,4 +25,4 @@ title: Note of Unix
 	>	i=$(($i+1)) 	
 	>	fi 	
 	>	done 	
-	>	exit 0` 		
+	>	exit 0				
