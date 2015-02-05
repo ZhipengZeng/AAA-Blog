@@ -7,6 +7,7 @@ title: Note of Unix
 	>	`>` writes to a file, overwriting any existing contents.	 
 	>	`>>` appends to a file.		
 2.	Add a number of user in Unix 	
+
 	>		`#!/bin/bash		
 	>		i=1 	
 	>		while [ $i -le 100 ]	
