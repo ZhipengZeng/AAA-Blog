@@ -5,8 +5,8 @@ title: Note of Unix
 ##A Note of Unix Problems I Met (keep updating)	
 1.	`>` and `>>`	
 
-	>	\> writes to a file, overwriting any existing contents.	 
-	>	\>\> appends to a file.		
+	>	> writes to a file, overwriting any existing contents.	 
+	>	>> appends to a file.		
 2.	Add a number of user in Unix 	
 
 	>	#!/bin/bash		

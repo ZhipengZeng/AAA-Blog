@@ -114,6 +114,7 @@ nav li a:hover{
 	background-color:#FFFFFF;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	border: 1px solid Black;
+	padding: 10px;
 }
 #content code{
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
