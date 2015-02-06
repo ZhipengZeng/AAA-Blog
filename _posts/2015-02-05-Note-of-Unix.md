@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Note of Unix
----
+---  
+
 ##A Note of Unix Problems I Met (keep updating)	
 1. `>` and `>>`	   
 
