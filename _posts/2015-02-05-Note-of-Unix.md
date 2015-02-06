@@ -8,8 +8,7 @@ title: Note of Unix
 	*	`>` writes to a file, overwriting any existing contents.	 
 	*	`>>` appends to a file.		
 
-2. Here is a shell script for creating a amount of users from imported file    
-
+2. Here is a shell script for creating a amount of users from imported file  
 ```sh
 #!/bin/bash
 if [ $# -ne 1 ]  

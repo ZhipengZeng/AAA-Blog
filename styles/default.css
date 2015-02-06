@@ -5,11 +5,10 @@
 	margin:0px;
 }
 body{
-	background-image:url(../images/background.png);
+	background-image:url(/AAA-Blog/images/background.png);
 	width:980px;
 	margin:0 auto;
 }
-
 :focus {
 	outline: 0;
 }
@@ -18,12 +17,11 @@ header{
 	border-top:2px #FFFFFF solid;
 	padding:10px;
 	margin:15px 0px 5px 0px;
-	background-image:url(../images/zzp.png);
+	background-image:url(/AAA-Blog/images/zzp.png);
 	background-position:80px 40px;
 	background-size:144px 52px;
 	background-repeat:no-repeat;
 	height:100px;
-	
 }
 header h1{
 	margin:80px 0px 5px 743px;
@@ -31,7 +29,6 @@ header h1{
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 	font-size:28px;
 }
-
 /*--------------navigation--------------*/
 nav{
 	height:35px;
@@ -40,7 +37,6 @@ nav{
 	background-color:#E8E8E8;
 	padding:0px;
 }
-
 nav ul a{
 	color:#606060;
 	padding:3.5px 4px 6px 4px;
@@ -60,7 +56,6 @@ nav li{
 	font-variant:small-caps;
 	text-align:center;
 }
-
 nav li a:link{
 	text-decoration:none;
 }
@@ -68,7 +63,6 @@ nav li a:hover{
 	background-color:#606060;
 	color:#FFFFFF;
 }
-
 /*--------------main--------------*/
 #main{
 	height:auto;
@@ -81,7 +75,7 @@ nav li a:hover{
 #content{
 	margin:30px 200px 0 30px;
 }
-#content ul{
+#content ol{
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-size:20px;
 	letter-spacing:.05em;
@@ -97,7 +91,7 @@ nav li a:hover{
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 	font-size:30px;
 }
-#content ol{
+#content ul{
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	padding: 5px 0 0 20px;
 }
@@ -108,20 +102,13 @@ nav li a:hover{
 #content a:hover{
 	color:#ADFFF1;
 }
-
 #content pre{
 	color:#ADFFF1;
 	background-color:#FFFFFF;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	padding: 10px;
 }
-#content code{
-	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-	background-color: #FFFFFF;
-	color: #606060;
-}
-
-/*--------------aside--------------*/
+/*--------------aside--------------
 aside{
 	height:30px;
 	width:80px;
@@ -150,9 +137,7 @@ aside a:active{
 aside:hover{
 	
 	color:#3F3F3F;
-}
-
-
+}*/
 /*--------------footer--------------*/
 footer{
 	height:100px;
@@ -160,7 +145,7 @@ footer{
 	margin:5px 0 25px 0;
 	text-align:center;
 	clear:both;
-	background-image:url(../images/zzp.png);
+	background-image:url(/AAA-Blog/images/zzp.png);
 	background-repeat:no-repeat;
 	background-position:center;
 }
