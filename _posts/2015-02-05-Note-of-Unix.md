@@ -32,3 +32,7 @@ do
 done < $1  
 exit 0
 ```
+
+{% highlight js %}
+alert('Hello, world!');
+{% endhighlight %}
