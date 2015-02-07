@@ -31,8 +31,11 @@ do
         useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2> /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c ${NAME} ${USERID}  
 done < $1  
 exit 0
-```
+```    
 
-{% highlight js %}
-alert('Hello, world!');
-{% endhighlight %}
+
+```   
+{% highlight js %}  
+alert('Hello, world!');  
+{% endhighlight %}  
+```  
