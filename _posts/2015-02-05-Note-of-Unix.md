@@ -8,7 +8,8 @@ title: Note of Unix
     *	`>` writes to a file, overwriting any existing contents.	 
     *	`>>` appends to a file.
 2. Here is a shell script for creating a amount of users from imported file  
-```#!/bin/bash  
+{% highlight bash %}  
+#!/bin/bash  
 if [ $# -ne 1 ]  
 then    
         echo USAGE: $0 filename.csv  
@@ -31,11 +32,4 @@ do
         useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2> /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c ${NAME} ${USERID}  
 done < $1  
 exit 0
-```    
-
-
-```   
-{% highlight js %}  
-alert('Hello, world!');  
-{% endhighlight %}  
-```  
+{% endhighlight %}
