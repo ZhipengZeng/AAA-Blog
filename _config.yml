@@ -1,5 +1,6 @@
 baseurl: /AAA-Blog
-markdown: Kramdown
+#markdown: kramdown
+markdown: redcarpet
 encoding: utf-8
 highlighter: true
 highlighter: pygments
