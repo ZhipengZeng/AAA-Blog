@@ -1,2 +1,6 @@
 baseurl: /AAA-Blog
-pygments: true
+markdown: Kramdown
+encoding: utf-8
+highlighter: true
+highlighter: pygments
+activate :syntax, line_numbers: true
