@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Note of Unix
+title: Note of Unix (keep updating)
 ---  
 
 ## A Note of Unix Problems I Met (keep updating)	  

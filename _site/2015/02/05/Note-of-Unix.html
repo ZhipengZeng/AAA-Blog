@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Note of Unix</title>
-<link href="/AAA-Blog/styles/native.css" type="text/css" rel="stylesheet" />
+<title>Note of Unix (keep updating)</title>
+<link href="/AAA-Blog/styles/pygments.css" type="text/css" rel="stylesheet" />
 <link href="/AAA-Blog/styles/default.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -25,32 +25,33 @@
       <li><code>&gt;&gt;</code> appends to a file.</li>
     </ul>
   </li>
-  <li>Here is a shell script for creating a amount of users from imported file</li>
-</ol>
-
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">#!/bin/bash  
+  <li>Here is a shell script for creating a amount of users from imported file
+<code>sh
+#!/bin/bash  
 if [ $# -ne 1 ]  
 then    
-    echo USAGE: $0 filename.csv  
-    exit 1  
+ echo USAGE: $0 filename.csv  
+ exit 1  
 fi  
-grep -i &quot;^students&quot; /etc/group
+grep -i "^students" /etc/group
 if [ $? -ne 0 ]
 then
-    groupadd students
+ groupadd students
 fi
 while read line  
 do  
-    FIRST=`echo $line | cut -d &#39;&quot;&#39; -f2 | cut -d &#39;,&#39; -f2`  
-    LAST=`echo $line | cut -d &#39;&quot;&#39; -f2 | cut -d &#39;,&#39; -f1`  
-    NAME=&quot;$FIRST $LAST&quot;  
-    USERID=`echo $line | cut -d &#39;,&#39; -f3`  
-    HOMEDIR=&quot;/home/${USERID}&quot;  
-    GROUPNAME=students  
-    STARTUPSHELL=/bin/bash  
-    useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2&gt; /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c ${NAME} ${USERID}  
+ FIRST=`echo $line | cut -d '"' -f2 | cut -d ',' -f2`  
+ LAST=`echo $line | cut -d '"' -f2 | cut -d ',' -f1`  
+ NAME="$FIRST $LAST"  
+ USERID=`echo $line | cut -d ',' -f3`  
+ HOMEDIR="/home/${USERID}"  
+ GROUPNAME=students  
+ STARTUPSHELL=/bin/bash  
+ useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2&gt; /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c ${NAME} ${USERID}  
 done &lt; $1  
-exit 0</code></pre></div>
+exit 0
+</code></li>
+</ol>
 
 </div>
 <footer>
