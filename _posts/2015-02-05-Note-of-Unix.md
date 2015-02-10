@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Note of Unix (keep updating)
+tag: Unix
 ---  
 
 ## A Note of Unix Problems I Met (keep updating)	  
@@ -8,7 +9,7 @@ title: Note of Unix (keep updating)
     *	`>` writes to a file, overwriting any existing contents.	 
     *	`>>` appends to a file.
 2. Here is a shell script for creating a amount of users from imported file
-{% highlight sh %}
+{% highlight bash %}
 #!/bin/bash  
 if [ $# -ne 1 ]  
 then    

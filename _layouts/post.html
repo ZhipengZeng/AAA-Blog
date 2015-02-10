@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+<link href="{{ site.baseurl }}/styles/post.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<aside>
+<img src="{{ site.baseurl }}/images/myIcon.png" alt="" />
+<div class="side" id="home"><h3><a href="{{ site.baseurl }}/index.html" title="home">Home</a></h3></div>
+<div class="side"><h3>summary</h3>{{ page.summary }}</div>
+<div class="side"><h3>posted date</h3>{{ page.date | date_to_string }}</div>
+<div class="side"><h3>category</h3>{{ page.category }}</div>
+<div class="side"><h3>tag</h3>{{ page.tag }}</div>
+</aside>
+<div class="content">
+	{{ content }}
+</div>
+</body>
+</html>
