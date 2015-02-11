@@ -4,4 +4,3 @@ baseurl: /AAA-Blog
 #markdown: redcarpet
 encoding: utf-8
 highlighter: pygments
-activate :syntax, line_numbers: true

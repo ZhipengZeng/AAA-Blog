@@ -10,7 +10,7 @@ tag: [ Unix, Note ]
     *	`>` writes to a file, overwriting any existing contents.	 
     *	`>>` appends to a file.
 2. Here is a shell script for creating a amount of users from imported file
-```sh
+{% highlight bash %}
 #!/bin/bash  
 if [ $# -ne 1 ]  
 then    
@@ -34,4 +34,4 @@ do
     useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2> /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c ${NAME} ${USERID}  
 done < $1  
 exit 0
-```
+{% endhighlight %}
