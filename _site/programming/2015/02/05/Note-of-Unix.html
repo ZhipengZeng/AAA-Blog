@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Note of Unix (keep updating)</title>
+<link href="/AAA-Blog/styles/post.css" type="text/css" rel="stylesheet" />
+<link href="/AAA-Blog/styles/native.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<aside>
+<img src="/AAA-Blog/images/myIcon.png" alt="" />
+<div class="side" id="home"><h3><a href="/AAA-Blog/index.html" title="home">Home</a></h3></div>
+<div class="side"><h3>summary</h3></div>
+<div class="side"><h3>posted date</h3>05 Feb 2015</div>
+<div class="side"><h3>category</h3>Programming</div>
+<div class="side">
+<h3>tag</h3>
+
+    <span class="tag">Unix</span>
+
+    <span class="tag">Note</span>
+
+</div>
+</aside>
+<div class="content">
+	<h2 id="a-note-of-unix-problems-i-met-keep-updating">A Note of Unix Problems I Met (keep updating)</h2>
+<ol>
+  <li><code>&gt;</code> and <code>&gt;&gt;</code>
+    <ul>
+      <li><code>&gt;</code> writes to a file, overwriting any existing contents.	 </li>
+      <li><code>&gt;&gt;</code> appends to a file.</li>
+    </ul>
+  </li>
+  <li>Here is a shell script for creating a amount of users from imported file</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#!/bin/bash  </span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne 1 <span class="o">]</span>  
+<span class="k">then    
+    </span><span class="nb">echo </span>USAGE: <span class="nv">$0</span> filename.csv
+    <span class="nb">exit </span>1
+<span class="k">fi  
+</span>grep -i <span class="s2">"^students"</span> /etc/group
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne 0 <span class="o">]</span>
+<span class="k">then
+    </span>groupadd students
+<span class="k">fi
+while </span><span class="nb">read </span>line  
+<span class="k">do  
+    </span><span class="nv">FIRST</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> | cut -d <span class="s1">'"'</span> -f2 | cut -d <span class="s1">','</span> -f2<span class="sb">`</span>  
+    <span class="nv">LAST</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> | cut -d <span class="s1">'"'</span> -f2 | cut -d <span class="s1">','</span> -f1<span class="sb">`</span>  
+    <span class="nv">NAME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FIRST</span><span class="s2"> </span><span class="nv">$LAST</span><span class="s2">"</span>  
+    <span class="nv">USERID</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> | cut -d <span class="s1">','</span> -f3<span class="sb">`</span>  
+    <span class="nv">HOMEDIR</span><span class="o">=</span><span class="s2">"/home/</span><span class="k">${</span><span class="nv">USERID</span><span class="k">}</span><span class="s2">"</span>  
+    <span class="nv">GROUPNAME</span><span class="o">=</span>students  
+    <span class="nv">STARTUPSHELL</span><span class="o">=</span>/bin/bash  
+    useradd -g <span class="k">${</span><span class="nv">GROUPNAME</span><span class="k">}</span> -p <span class="sb">`</span><span class="o">(</span><span class="nb">echo</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span>; sleep 1; <span class="nb">echo</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span><span class="o">)</span> | grub-md5-crypt 2&gt; /dev/null | tail -1<span class="sb">`</span> -d <span class="k">${</span><span class="nv">HOMEDIR</span><span class="k">}</span> -m -s <span class="k">${</span><span class="nv">STARTUPSHELL</span><span class="k">}</span> -c <span class="k">${</span><span class="nv">NAME</span><span class="k">}</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span>  
+<span class="k">done</span> &lt; <span class="nv">$1</span>  
+<span class="nb">exit </span>0</code></pre></div>
+
+	<div id="disqus_thread"></div> 
+	<script type="text/javascript">
+		var disqus_shortname = 'zhipengzeng';
+		(function() { 
+			var dsq = document.createElement('script'); 
+			dsq.type = 'text/javascript'; 
+			dsq.async = true; 
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; 
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
+	 </script> 
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+ <div class="disqus_a"> <a href="http://disqus.com” class=”dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></div>
+</div>
+
+ 
+</body>
+</html>

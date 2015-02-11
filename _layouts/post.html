@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>{{ page.title }}</title>
 <link href="{{ site.baseurl }}/styles/post.css" type="text/css" rel="stylesheet" />
+<link href="{{ site.baseurl }}/styles/native.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <aside>
@@ -12,10 +13,29 @@
 <div class="side"><h3>summary</h3>{{ page.summary }}</div>
 <div class="side"><h3>posted date</h3>{{ page.date | date_to_string }}</div>
 <div class="side"><h3>category</h3>{{ page.category }}</div>
-<div class="side"><h3>tag</h3>{{ page.tag }}</div>
+<div class="side">
+<h3>tag</h3>
+{% for item in page.tag %}
+    <span class="tag">{{ item }}</span>
+{% endfor %}
+</div>
 </aside>
 <div class="content">
 	{{ content }}
+	<div id="disqus_thread"></div> 
+	<script type="text/javascript">
+		var disqus_shortname = 'zhipengzeng';
+		(function() { 
+			var dsq = document.createElement('script'); 
+			dsq.type = 'text/javascript'; 
+			dsq.async = true; 
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; 
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
+	 </script> 
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+ <div class="disqus_a"> <a href="http://disqus.com” class=”dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></div>
 </div>
+
+ 
 </body>
 </html>

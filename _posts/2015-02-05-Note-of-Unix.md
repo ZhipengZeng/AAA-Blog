@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Note of Unix (keep updating)
-tag: Unix
+category: Programming
+tag: [ Unix, Note ]
 ---  
 
 ## A Note of Unix Problems I Met (keep updating)	  
@@ -9,12 +10,12 @@ tag: Unix
     *	`>` writes to a file, overwriting any existing contents.	 
     *	`>>` appends to a file.
 2. Here is a shell script for creating a amount of users from imported file
-{% highlight bash %}
+{% highlight shell %}
 #!/bin/bash  
 if [ $# -ne 1 ]  
 then    
-    echo USAGE: $0 filename.csv  
-    exit 1  
+    echo USAGE: $0 filename.csv
+    exit 1
 fi  
 grep -i "^students" /etc/group
 if [ $? -ne 0 ]

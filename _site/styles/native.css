@@ -3,10 +3,10 @@
 .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .esc { color: #d0d0d0 } /* Escape */
 .g { color: #d0d0d0 } /* Generic */
-.k { color: #6ab825; font-weight: bold } /* Keyword */
+.k { color: #6ab825; font-weight: bold; font-family: Segoe UI; } /* Keyword */
 .l { color: #d0d0d0 } /* Literal */
 .n { color: #d0d0d0 } /* Name */
-.o { color: #d0d0d0 } /* Operator */
+.o { color: #177400 } /* Operator */
 .x { color: #d0d0d0 } /* Other */
 .p { color: #d0d0d0 } /* Punctuation */
 .cm { color: #999999; font-style: italic } /* Comment.Multiline */
@@ -45,7 +45,7 @@
 .nx { color: #d0d0d0 } /* Name.Other */
 .py { color: #d0d0d0 } /* Name.Property */
 .nt { color: #6ab825; font-weight: bold } /* Name.Tag */
-.nv { color: #40ffff } /* Name.Variable */
+.nv { color: #0031CF } /* Name.Variable */
 .ow { color: #6ab825; font-weight: bold } /* Operator.Word */
 .w { color: #666666 } /* Text.Whitespace */
 .mb { color: #3677a9 } /* Literal.Number.Bin */
@@ -53,16 +53,16 @@
 .mh { color: #3677a9 } /* Literal.Number.Hex */
 .mi { color: #3677a9 } /* Literal.Number.Integer */
 .mo { color: #3677a9 } /* Literal.Number.Oct */
-.sb { color: #ed9d13 } /* Literal.String.Backtick */
+.sb { color: #C800AE; font-family: Consolas; } /* Literal.String.Backtick */
 .sc { color: #ed9d13 } /* Literal.String.Char */
 .sd { color: #ed9d13 } /* Literal.String.Doc */
-.s2 { color: #ed9d13 } /* Literal.String.Double */
+.s2 { color: #C800AE; font-family: Consolas;} /* Literal.String.Double */
 .se { color: #ed9d13 } /* Literal.String.Escape */
 .sh { color: #ed9d13 } /* Literal.String.Heredoc */
 .si { color: #ed9d13 } /* Literal.String.Interpol */
 .sx { color: #ffa500 } /* Literal.String.Other */
 .sr { color: #ed9d13 } /* Literal.String.Regex */
-.s1 { color: #ed9d13 } /* Literal.String.Single */
+.s1 { color: #C800AE; font-family: Consolas; } /* Literal.String.Single */
 .ss { color: #ed9d13 } /* Literal.String.Symbol */
 .bp { color: #24909d } /* Name.Builtin.Pseudo */
 .vc { color: #40ffff } /* Name.Variable.Class */
