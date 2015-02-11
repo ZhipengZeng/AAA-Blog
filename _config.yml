@@ -1,6 +1,6 @@
-highlighter: rouge
+#highlighter: rouge
 baseurl: /AAA-Blog
 #markdown: kramdown
 #markdown: redcarpet
 encoding: utf-8
-#highlighter: pygments
+highlighter: pygments
