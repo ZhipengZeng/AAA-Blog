@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Summary of building Github Page with jekyll in Windows7</title>
+<link href="/AAA-Blog/styles/post.css" type="text/css" rel="stylesheet" />
+<link href="/AAA-Blog/styles/native.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<aside>
+<img src="/AAA-Blog/images/myIcon.png" alt="" />
+<div class="side" id="home"><h3><a href="/AAA-Blog/index.html" title="home">Home</a></h3></div>
+<div class="side"><h3>summary</h3></div>
+<div class="side"><h3>posted date</h3>12 Feb 2015</div>
+<div class="side"><h3>category</h3>Programming</div>
+<div class="side">
+<h3>tag</h3>
+
+    <span class="tag">Github</span>
+
+    <span class="tag">Jekyll</span>
+
+    <span class="tag">Blog</span>
+
+    <span class="tag">Windows</span>
+
+</div>
+</aside>
+<div class="content">
+	<h2 id="summary-of-building-github-page-with-jekyll-in-windows7">Summary of building Github Page with jekyll in Windows7</h2>
+
+<ol>
+  <li>
+    <p>Useful Websites:<br />
+     https://pages.github.com/<br />
+     https://help.github.com/articles/using-jekyll-with-pages/<br />
+     http://jekyllrb.com/docs/installation/<br />
+     http://jekyll-windows.juthilo.com/ (a guide with steps and details) <br />
+     http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/   </p>
+  </li>
+  <li>
+    <p>make sure the version of DevKit matches to Ruby’s.<br />
+ make sure your directory path does not contain blank space.</p>
+  </li>
+  <li>
+    <p>check the PATH variable.</p>
+  </li>
+  <li>Useful Commands:<br />
+    <ul>
+      <li><a href="http://rubyinstaller.org/downloads/">Ruby &amp; DevKit</a><br />
+ <code>cd C:\RubyDevKit</code><br />
+ <code>ruby dk.rb init</code> <br />
+ <code>ruby dk.rb install</code>    </li>
+      <li>jekyll<br />
+ <code>gem update &amp;&amp; gem cleanup</code><br />
+ <code>gem install jekyll</code><br />
+ <code>gem uninstall jekyll</code><br />
+ <code>gem update --system</code>  </li>
+      <li>rouge<br />
+ <code>gem install rouge</code><br />
+ put <code>highlighter: rouge</code> into <code>-config.yml</code>  </li>
+      <li>pygments (need python)<br />
+ <a href="https://pip.pypa.io/en/latest/installing.html">download</a> <code>get-pip.py</code> <br />
+ <code>cd C:\pip</code><br />
+ <code>python get-pip.py</code><br />
+ <code>python -m pip install Pygments</code><br />
+ put <code>highlighter: pygments</code> into <code>-config.yml</code>  </li>
+    </ul>
+  </li>
+  <li>
+    <p>local server:<br />
+ <code>http://localhost:4000/AAA-Blog/</code>  </p>
+  </li>
+  <li>No BOM allowed;<br />
+ Set your encoding to UTF-8;<br />
+ put <code>encoding: utf-8</code> into <code>_config.yml</code></li>
+</ol>
+
+
+	<div id="disqus_thread"></div> 
+	<script type="text/javascript">
+		var disqus_shortname = 'zhipengzeng';
+		(function() { 
+			var dsq = document.createElement('script'); 
+			dsq.type = 'text/javascript'; 
+			dsq.async = true; 
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; 
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
+	 </script> 
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+ <div class="disqus_a"> <a href="http://disqus.com” class=”dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></div> 
+</div>
+
+ 
+</body>
+</html>

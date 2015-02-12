@@ -129,7 +129,7 @@ aside img{
 li,li p{
 	margin-bottom: 5px;
 }
-.content ol{
-	margin-bottom: 5px;
+.content ol li{
+	margin-bottom: 10px;
 }
 
