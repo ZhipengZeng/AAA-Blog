@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Note of Java (keep updating)</title>
+<link href="/AAA-Blog/styles/post.css" type="text/css" rel="stylesheet" />
+<link href="/AAA-Blog/styles/native.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<aside>
+<img src="/AAA-Blog/images/myIcon.png" alt="" />
+<div class="side" id="home"><h3><a href="/AAA-Blog/index.html" title="home">Home</a></h3></div>
+<div class="side"><h3>summary</h3></div>
+<div class="side"><h3>posted date</h3>11 Feb 2015</div>
+<div class="side"><h3>category</h3>Programming</div>
+<div class="side">
+<h3>tag</h3>
+
+    <span class="tag">Java</span>
+
+    <span class="tag">Note</span>
+
+</div>
+</aside>
+<div class="content">
+	<h2 id="something-in-java">Something in Java</h2>
+
+<ol>
+  <li>(11/02/2015) Could not center JLabel in JPanel’s BorderLayout?<br />
+ <strong>Solution:</strong></li>
+</ol>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JPanel</span> <span class="n">myPanel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JPanel</span><span class="o">(</span><span class="k">new</span> <span class="n">BorderLayout</span><span class="o">());</span>
+<span class="n">JLabel</span> <span class="n">myLabel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="o">(</span><span class="s">"make me center"</span><span class="o">);</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="na">setHorizontalAlignment</span><span class="o">(</span><span class="n">JLabel</span><span class="o">.</span><span class="na">CENTER</span><span class="o">);</span>
+<span class="n">myPanel</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">label</span><span class="o">,</span> <span class="n">BorderLayout</span><span class="o">.</span><span class="na">CENTER</span><span class="o">);</span></code></pre></div>
+
+	<div id="disqus_thread"></div> 
+	<script type="text/javascript">
+		var disqus_shortname = 'zhipengzeng';
+		(function() { 
+			var dsq = document.createElement('script'); 
+			dsq.type = 'text/javascript'; 
+			dsq.async = true; 
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; 
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
+	 </script> 
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+ <div class="disqus_a"> <a href="http://disqus.com” class=”dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></div> 
+</div>
+
+ 
+</body>
+</html>
