@@ -33,13 +33,13 @@ tag: [ CSS,  HTML, Note ]
 #example:after{
 	content:"";
 	display:block;
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
 	background-image:url(image's link);
 	width:100%;
 	height:100%;
-	opacity:0.2;
+	opacity:0.5;
 	z-index:-1;
 }
 	{% endhighlight %}

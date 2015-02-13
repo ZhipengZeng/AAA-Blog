@@ -8,11 +8,11 @@ tag: [ Github, Jekyll, Blog, Windows ]
 ## Summary of building Github Page with jekyll in Windows7
 
 1. Useful Websites:  
-		https://pages.github.com/  
-		https://help.github.com/articles/using-jekyll-with-pages/  
-		http://jekyllrb.com/docs/installation/  
-		http://jekyll-windows.juthilo.com/ (a guide with steps and details)   
-		http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/   
+		[https://pages.github.com/](https://pages.github.com/)  
+		[https://help.github.com/articles/using-jekyll-with-pages/](https://help.github.com/articles/using-jekyll-with-pages/)  
+		[http://jekyllrb.com/docs/installation/](http://jekyllrb.com/docs/installation/)  
+		[http://jekyll-windows.juthilo.com/](http://jekyll-windows.juthilo.com/) (a guide with steps and details)   
+		[http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/](http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/)   
 
 2. make sure the version of DevKit matches to Ruby's.  
 	make sure your directory path does not contain blank space.

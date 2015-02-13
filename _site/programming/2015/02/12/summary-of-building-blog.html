@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Summary of building Github Page with jekyll in Windows7</title>
 <link href="/AAA-Blog/styles/post.css" type="text/css" rel="stylesheet" />
 <link href="/AAA-Blog/styles/native.css" type="text/css" rel="stylesheet" />
@@ -32,11 +34,11 @@
 <ol>
   <li>
     <p>Useful Websites:<br />
-     https://pages.github.com/<br />
-     https://help.github.com/articles/using-jekyll-with-pages/<br />
-     http://jekyllrb.com/docs/installation/<br />
-     http://jekyll-windows.juthilo.com/ (a guide with steps and details) <br />
-     http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/   </p>
+     <a href="https://pages.github.com/">https://pages.github.com/</a><br />
+     <a href="https://help.github.com/articles/using-jekyll-with-pages/">https://help.github.com/articles/using-jekyll-with-pages/</a><br />
+     <a href="http://jekyllrb.com/docs/installation/">http://jekyllrb.com/docs/installation/</a><br />
+     <a href="http://jekyll-windows.juthilo.com/">http://jekyll-windows.juthilo.com/</a> (a guide with steps and details) <br />
+     <a href="http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/">http://cn.yizeng.me/2013/05/10/setup-jekyll-on-windows/</a>   </p>
   </li>
   <li>
     <p>make sure the version of DevKit matches to Ruby’s.<br />
@@ -71,9 +73,13 @@
     <p>local server:<br />
  <code>http://localhost:4000/AAA-Blog/</code>  </p>
   </li>
-  <li>No BOM allowed;<br />
+  <li>
+    <p>No BOM allowed;<br />
  Set your encoding to UTF-8;<br />
- put <code>encoding: utf-8</code> into <code>_config.yml</code></li>
+ put <code>encoding: utf-8</code> into <code>_config.yml</code></p>
+  </li>
+  <li>before using local server, change highlighter <code>pygments</code> to <code>rouge</code>;
+ before post a commit to github, change it back.</li>
 </ol>
 
 
