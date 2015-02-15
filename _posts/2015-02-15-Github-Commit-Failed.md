@@ -1,10 +1,16 @@
 ---
 layout: post
-title: Github windows|Commit failed|Failed to create a new commit
+title: Github Commit Failed
 category: Programming
 tag: [ GitHub, Error ]
 ---
 
-## Github windows: Commit failed: Failed to create a new commit
+## Github Commit failed  
 
-In my case, I simply delete `index.lock` this file in `.git` folder of your repository, then it works.
+In my case, I run Github in Windows and an error occured:  
+
+`Failed to create a new commit`  
+
+**Solution:**  
+
+I simply delete `index.lock` this file in `.git` folder of your repository, then it works.
