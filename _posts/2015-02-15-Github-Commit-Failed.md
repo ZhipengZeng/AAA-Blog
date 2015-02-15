@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Github windows: Commit failed: Failed to create a new commit
+title: Github windows|Commit failed|Failed to create a new commit
 category: Programming
 tag: [ GitHub, Error ]
 ---
