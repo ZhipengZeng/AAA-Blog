@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Note of FrontEnd (keep updating)
+title: Note of FrontEnd
 category: Programming
 tag: [ CSS,  HTML, Note ]
 ---

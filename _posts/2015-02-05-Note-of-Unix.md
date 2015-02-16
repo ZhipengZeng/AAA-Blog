@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Note of Unix (keep updating)
+title: Note of Unix 
 category: Programming
 tag: [ Unix, Note ]
 ---  

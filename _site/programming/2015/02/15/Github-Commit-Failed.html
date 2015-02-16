@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Note of .NET (keep updating)</title>
+<title>Github Commit Failed</title>
 <link href="/AAA-Blog/styles/post.css" type="text/css" rel="stylesheet" />
 <link href="/AAA-Blog/styles/highlight_native.css" type="text/css" rel="stylesheet" />
 </head>
@@ -13,27 +13,27 @@
 <img src="/AAA-Blog/images/myIcon.png" alt="" />
 <div class="side" id="home"><h3><a href="/AAA-Blog/index.html" title="home">Home</a></h3></div>
 <div class="side"><h3>summary</h3></div>
-<div class="side"><h3>posted date</h3>03 Feb 2015</div>
+<div class="side"><h3>posted date</h3>15 Feb 2015</div>
 <div class="side"><h3>category</h3>Programming</div>
 <div class="side">
 <h3>tag</h3>
 
-    <span class="tag">.NET</span>
+    <span class="tag">GitHub</span>
 
-    <span class="tag">Note</span>
+    <span class="tag">Error</span>
 
 </div>
 </aside>
 <div class="content">
-	<h2 id="a-note-of-net-problems-i-met-keep-updating">A Note of .NET Problems I Met (keep updating)</h2>
-<ol>
-  <li>can not load the project in Visual Studio when you change the file name.<br />
-    <ul>
-      <li>I found an answer in <a href="http://stackoverflow.com/questions/5315449/visual-studio-how-to-change-projects-folder-name-and-solution-name-w-o-breaki">stackoverflow</a>.</li>
-      <li>You can simply edit the path inside *.sln and *.csproj file by text editor.</li>
-    </ul>
-  </li>
-</ol>
+	<h2 id="github-commit-failed">Github Commit failed</h2>
+
+<p>In my case, I run Github in Windows and an error occured:  </p>
+
+<p><code>Failed to create a new commit</code>  </p>
+
+<p><strong>Solution:</strong>  </p>
+
+<p>I simply delete <code>index.lock</code> this file in <code>.git</code> folder of your repository, then it works.</p>
 
 	<div id="disqus_thread"></div> 
 	<script type="text/javascript">

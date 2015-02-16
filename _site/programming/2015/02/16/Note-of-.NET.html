@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Note of .NET</title>
+<link href="/AAA-Blog/styles/post.css" type="text/css" rel="stylesheet" />
+<link href="/AAA-Blog/styles/highlight_native.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<aside>
+<img src="/AAA-Blog/images/myIcon.png" alt="" />
+<div class="side" id="home"><h3><a href="/AAA-Blog/index.html" title="home">Home</a></h3></div>
+<div class="side"><h3>summary</h3></div>
+<div class="side"><h3>posted date</h3>16 Feb 2015</div>
+<div class="side"><h3>category</h3>Programming</div>
+<div class="side">
+<h3>tag</h3>
+
+    <span class="tag">.NET</span>
+
+    <span class="tag">Note</span>
+
+</div>
+</aside>
+<div class="content">
+	<h2 id="a-note-of-net-problems-i-met-keep-updating">A Note of .NET Problems I Met (keep updating)</h2>
+
+<ol>
+  <li>
+    <p>(2015/02/03) Can not load the project in Visual Studio when you change the file path.   </p>
+
+    <ul>
+      <li>I found an answer in <a href="http://stackoverflow.com/questions/5315449/visual-studio-how-to-change-projects-folder-name-and-solution-name-w-o-breaki">stackoverflow</a>.</li>
+      <li>You can simply edit the path inside *.sln and *.csproj file by text editor.  </li>
+    </ul>
+  </li>
+  <li>
+    <p>(2015/02/16) <code>&amp;=</code>, <code>|=</code>, <code>~</code> and Keyboard Handler</p>
+  </li>
+</ol>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">void</span> <span class="nf">richTextBox1_KeyDown</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">KeyEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Font</span> <span class="n">myFont</span> <span class="p">=</span> <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span><span class="p">;</span>
+        <span class="n">FontStyle</span> <span class="n">newFontStyle</span> <span class="p">=</span> <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span><span class="p">.</span><span class="n">Style</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Control</span> <span class="p">&amp;&amp;</span> <span class="n">e</span><span class="p">.</span><span class="n">KeyCode</span> <span class="p">==</span> <span class="n">Keys</span><span class="p">.</span><span class="n">B</span><span class="p">)</span>             <span class="c1">// press down ctrl+B
+</span>        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span><span class="p">.</span><span class="n">Bold</span> <span class="p">==</span> <span class="k">true</span><span class="p">)</span>
+                    <span class="n">newFontStyle</span> <span class="p">&amp;=</span> <span class="p">~</span><span class="n">FontStyle</span><span class="p">.</span><span class="n">Bold</span><span class="p">;</span>       <span class="c1">// x &amp;= y means x = x &amp; y   // ~ means destructor
+</span>                <span class="k">else</span>                                                                       
+                    <span class="n">newFontStyle</span> <span class="p">|=</span> <span class="n">FontStyle</span><span class="p">.</span><span class="n">Bold</span><span class="p">;</span> 
+                <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Font</span><span class="p">(</span><span class="n">myFont</span><span class="p">.</span><span class="n">FontFamily</span><span class="p">,</span> <span class="n">myFont</span><span class="p">.</span><span class="n">Size</span><span class="p">,</span> <span class="n">newFontStyle</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></div>
+
+	<div id="disqus_thread"></div> 
+	<script type="text/javascript">
+		var disqus_shortname = 'zhipengzeng';
+		(function() { 
+			var dsq = document.createElement('script'); 
+			dsq.type = 'text/javascript'; 
+			dsq.async = true; 
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; 
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();
+	 </script> 
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+ <div class="disqus_a"> <a href="http://disqus.com” class=”dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></div> 
+</div>
+
+ 
+</body>
+</html>

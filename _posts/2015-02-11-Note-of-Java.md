@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Note of Java (keep updating)
+title: Note of Java 
 category: Programming
 tag: [ Java,  Note ]
 ---
