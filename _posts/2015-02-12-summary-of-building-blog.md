@@ -39,7 +39,7 @@ tag: [ Github, Jekyll, Blog, Windows ]
 	`python -m pip install Pygments`  
 	put `highlighter: pygments` into `-config.yml`  
 
-5. If you have an SSL problem, copy this file [`cacert.pem`]({{ site.baseurl }}/files/cacert.pem) to your Ruby directory.  
+5. If you have an SSL problem, download and put this file [`cacert.pem`]({{ site.baseurl }}/files/cacert.pem) to your Ruby directory.  
 	Then add a variable `SSL_CERT_FILE` in your environment variable, set its value as the location of `cacert.pem`, like `C:\Ruby21-x64\cacert.pem`.  
 
 6. local server:  
