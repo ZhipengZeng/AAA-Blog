@@ -39,13 +39,16 @@ tag: [ Github, Jekyll, Blog, Windows ]
 	`python -m pip install Pygments`  
 	put `highlighter: pygments` into `-config.yml`  
 
-5. local server:  
+5. If you have an SSL problem, copy this file [`cacert.pem`]({{ site.baseurl }}/files/cacert.pem) to your Ruby directory.  
+	Then add a variable `SSL_CERT_FILE` in your environment variable, set its value as the location of `cacert.pem`, like `C:\Ruby21-x64\cacert.pem`.  
+
+6. local server:  
 	`http://localhost:4000/AAA-Blog/`  
 
-6. No BOM allowed;  
+7. No BOM allowed;  
 	Set your encoding to UTF-8;  
 	put `encoding: utf-8` into `_config.yml`
 
-7. before using local server, change highlighter `pygments` to `rouge`;
+8. before using local server, change highlighter `pygments` to `rouge`;
 	before post a commit to github, change it back.
 
