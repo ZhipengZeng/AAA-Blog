@@ -6,10 +6,10 @@ tag: [ Unix, Note ]
 ---  
 
 ## A Note of Unix Problems I Met (keep updating)	  
-1. `>` and `>>`
+1. (2015/02/05) `>` and `>>`
     *	`>` writes to a file, overwriting any existing contents.	 
     *	`>>` appends to a file.
-2. Here is a shell script for creating a amount of users from imported file
+2. (2015/02/05) Here is a shell script for creating a amount of users from imported file
 {% highlight bash %}
 #!/bin/bash  
 if [ $# -ne 1 ]  
@@ -31,7 +31,8 @@ do
     HOMEDIR="/home/${USERID}"  
     GROUPNAME=students  
     STARTUPSHELL=/bin/bash  
-    useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2> /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c ${NAME} ${USERID}  
+    useradd -g ${GROUPNAME} -p `(echo ${USERID}; sleep 1; echo ${USERID}) | grub-md5-crypt 2> /dev/null | tail -1` -d ${HOMEDIR} -m -s ${STARTUPSHELL} -c "${NAME}" ${USERID}  
+    echo $?
 done < $1  
 exit 0
 {% endhighlight %}
