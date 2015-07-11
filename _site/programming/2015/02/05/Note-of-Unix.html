@@ -27,36 +27,37 @@
 <div class="content">
 	<h2 id="a-note-of-unix-problems-i-met-keep-updating">A Note of Unix Problems I Met (keep updating)</h2>
 <ol>
-  <li><code>&gt;</code> and <code>&gt;&gt;</code>
+  <li>(2015/02/05) <code>&gt;</code> and <code>&gt;&gt;</code>
     <ul>
       <li><code>&gt;</code> writes to a file, overwriting any existing contents.	 </li>
       <li><code>&gt;&gt;</code> appends to a file.</li>
     </ul>
   </li>
-  <li>Here is a shell script for creating a amount of users from imported file</li>
+  <li>(2015/02/05) Here is a shell script for creating a amount of users from imported file</li>
 </ol>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash  </span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne 1 <span class="o">]</span>  
-<span class="k">then    
-    </span><span class="nb">echo </span>USAGE: <span class="nv">$0</span> filename.csv
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne <span class="m">1</span> <span class="o">]</span>  
+<span class="k">then</span>    
+    <span class="nb">echo </span>USAGE: <span class="nv">$0</span> filename.csv
     <span class="nb">exit </span>1
-<span class="k">fi  
-</span>grep -i <span class="s2">"^students"</span> /etc/group
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne 0 <span class="o">]</span>
-<span class="k">then
-    </span>groupadd students
-<span class="k">fi
-while </span><span class="nb">read </span>line  
-<span class="k">do  
-    </span><span class="nv">FIRST</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> | cut -d <span class="s1">'"'</span> -f2 | cut -d <span class="s1">','</span> -f2<span class="sb">`</span>  
-    <span class="nv">LAST</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> | cut -d <span class="s1">'"'</span> -f2 | cut -d <span class="s1">','</span> -f1<span class="sb">`</span>  
-    <span class="nv">NAME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FIRST</span><span class="s2"> </span><span class="nv">$LAST</span><span class="s2">"</span>  
-    <span class="nv">USERID</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> | cut -d <span class="s1">','</span> -f3<span class="sb">`</span>  
-    <span class="nv">HOMEDIR</span><span class="o">=</span><span class="s2">"/home/</span><span class="k">${</span><span class="nv">USERID</span><span class="k">}</span><span class="s2">"</span>  
+<span class="k">fi</span>  
+grep -i <span class="s2">&quot;^students&quot;</span> /etc/group
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span>
+<span class="k">then</span>
+    groupadd students
+<span class="k">fi</span>
+<span class="k">while</span> <span class="nb">read </span>line  
+<span class="k">do</span>  
+    <span class="nv">FIRST</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> <span class="p">|</span> cut -d <span class="s1">&#39;&quot;&#39;</span> -f2 <span class="p">|</span> cut -d <span class="s1">&#39;,&#39;</span> -f2<span class="sb">`</span>  
+    <span class="nv">LAST</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> <span class="p">|</span> cut -d <span class="s1">&#39;&quot;&#39;</span> -f2 <span class="p">|</span> cut -d <span class="s1">&#39;,&#39;</span> -f1<span class="sb">`</span>  
+    <span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;$FIRST $LAST&quot;</span>  
+    <span class="nv">USERID</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span> <span class="p">|</span> cut -d <span class="s1">&#39;,&#39;</span> -f3<span class="sb">`</span>  
+    <span class="nv">HOMEDIR</span><span class="o">=</span><span class="s2">&quot;/home/${USERID}&quot;</span>  
     <span class="nv">GROUPNAME</span><span class="o">=</span>students  
     <span class="nv">STARTUPSHELL</span><span class="o">=</span>/bin/bash  
-    useradd -g <span class="k">${</span><span class="nv">GROUPNAME</span><span class="k">}</span> -p <span class="sb">`</span><span class="o">(</span><span class="nb">echo</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span>; sleep 1; <span class="nb">echo</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span><span class="o">)</span> | grub-md5-crypt 2&gt; /dev/null | tail -1<span class="sb">`</span> -d <span class="k">${</span><span class="nv">HOMEDIR</span><span class="k">}</span> -m -s <span class="k">${</span><span class="nv">STARTUPSHELL</span><span class="k">}</span> -c <span class="k">${</span><span class="nv">NAME</span><span class="k">}</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span>  
+    useradd -g <span class="k">${</span><span class="nv">GROUPNAME</span><span class="k">}</span> -p <span class="sb">`</span><span class="o">(</span><span class="nb">echo</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span><span class="p">;</span> sleep 1<span class="p">;</span> <span class="nb">echo</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span><span class="o">)</span> <span class="p">|</span> grub-md5-crypt 2&gt; /dev/null <span class="p">|</span> tail -1<span class="sb">`</span> -d <span class="k">${</span><span class="nv">HOMEDIR</span><span class="k">}</span> -m -s <span class="k">${</span><span class="nv">STARTUPSHELL</span><span class="k">}</span> -c <span class="s2">&quot;${NAME}&quot;</span> <span class="k">${</span><span class="nv">USERID</span><span class="k">}</span>  
+    <span class="nb">echo</span> <span class="nv">$?</span>
 <span class="k">done</span> &lt; <span class="nv">$1</span>  
 <span class="nb">exit </span>0</code></pre></div>
 

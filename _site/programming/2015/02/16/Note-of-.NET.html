@@ -45,15 +45,15 @@
     <span class="p">{</span>
         <span class="n">Font</span> <span class="n">myFont</span> <span class="p">=</span> <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span><span class="p">;</span>
         <span class="n">FontStyle</span> <span class="n">newFontStyle</span> <span class="p">=</span> <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span><span class="p">.</span><span class="n">Style</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Control</span> <span class="p">&amp;&amp;</span> <span class="n">e</span><span class="p">.</span><span class="n">KeyCode</span> <span class="p">==</span> <span class="n">Keys</span><span class="p">.</span><span class="n">B</span><span class="p">)</span>             <span class="c1">// press down ctrl+B
-</span>        <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Control</span> <span class="p">&amp;&amp;</span> <span class="n">e</span><span class="p">.</span><span class="n">KeyCode</span> <span class="p">==</span> <span class="n">Keys</span><span class="p">.</span><span class="n">B</span><span class="p">)</span>             <span class="c1">// press down ctrl+B</span>
+        <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
             <span class="p">{</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span><span class="p">.</span><span class="n">Bold</span> <span class="p">==</span> <span class="k">true</span><span class="p">)</span>
-                    <span class="n">newFontStyle</span> <span class="p">&amp;=</span> <span class="p">~</span><span class="n">FontStyle</span><span class="p">.</span><span class="n">Bold</span><span class="p">;</span>       <span class="c1">// x &amp;= y means x = x &amp; y   // ~ means destructor
-</span>                <span class="k">else</span>                                                                       
+                    <span class="n">newFontStyle</span> <span class="p">&amp;=</span> <span class="p">~</span><span class="n">FontStyle</span><span class="p">.</span><span class="n">Bold</span><span class="p">;</span>       <span class="c1">// x &amp;= y means x = x &amp; y   // ~ means destructor</span>
+                <span class="k">else</span>                                                                       
                     <span class="n">newFontStyle</span> <span class="p">|=</span> <span class="n">FontStyle</span><span class="p">.</span><span class="n">Bold</span><span class="p">;</span> 
-                <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Font</span><span class="p">(</span><span class="n">myFont</span><span class="p">.</span><span class="n">FontFamily</span><span class="p">,</span> <span class="n">myFont</span><span class="p">.</span><span class="n">Size</span><span class="p">,</span> <span class="n">newFontStyle</span><span class="p">);</span>
+                <span class="n">richTextBox1</span><span class="p">.</span><span class="n">SelectionFont</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Font</span><span class="p">(</span><span class="n">myFont</span><span class="p">.</span><span class="n">FontFamily</span><span class="p">,</span> <span class="n">myFont</span><span class="p">.</span><span class="n">Size</span><span class="p">,</span> <span class="n">newFontStyle</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span></code></pre></div>

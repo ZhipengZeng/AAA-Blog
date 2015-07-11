@@ -24,11 +24,11 @@ a:hover{
 	border-radius: 5px;
 }
 
-body{
-	background-image:url(/AAA-Blog/images/back2.png);
+.content{
+	background-image:url(/AAA-Blog/images/wallpapers-grey-431684.jpg);
 	background-attachment:fixed;
-	background-size:cover;
-	background-repeat: no-repeat;
+	background-size:contain;
+	background-repeat: repeat;
 }
 h2{
 	margin-bottom: 20px;

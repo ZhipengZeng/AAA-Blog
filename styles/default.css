@@ -13,12 +13,12 @@ body:after{
 	position:fixed;
 	top:0;
 	left:0;
-	background-image:url(/AAA-Blog/images/back.jpg);
+	background-image:url(/AAA-Blog/images/grey_blossom_by_thedarkenedpoet.jpg);
 	width:100%;
 	height:100%;
 	opacity:0.8;
 	z-index:-1;
-	background-size:cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -100,9 +100,9 @@ nav li a:hover{
 }
 #content p{
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	border-bottom:1px #FFFFFF solid;
-	padding:5px;
-	margin-bottom:10px;
+	/*border-bottom:1px #FFFFFF solid;
+	padding:5px;*/
+	/*margin-bottom:10px;*/
 }
 #content h2{
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
@@ -123,7 +123,7 @@ nav li a:hover{
 #content a:hover{
 	color:#ADFFF1;
 }
-
+/*******************************************************************/
 
 footer{
 	height:100px;
