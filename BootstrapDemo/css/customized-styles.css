@@ -1,0 +1,15 @@
+body{
+	margin-bottom: 80px;
+}
+.nohighlight:focus  {
+    outline:none;  
+}
+.page-header{
+	margin-top: 0;
+}
+.page-body{
+	padding-top: 0;
+}
+.featuredImg{
+	margin-bottom: 15px;
+}
